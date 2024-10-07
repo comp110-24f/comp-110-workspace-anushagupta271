@@ -32,7 +32,7 @@ def max(list: list[int]) -> int:
 
 def is_equal(list1: list[int], list2: list[int]) -> bool:
     """Checks if each index is equal to the same index of each list"""
-    if len(list1) == 0 or len(list2) == 0 or len(list1) != len(list2):
+    if len(list1) != len(list2):
         return False
     else:
         i: int = 0
@@ -45,8 +45,6 @@ def is_equal(list1: list[int], list2: list[int]) -> bool:
 
 def extend(list1: list[int], list2: list[int]) -> None:
     """Add list 2 to the end of list1 and return the mutated first list"""
-    if len(list1) == 0 or len(list2) == 0:
-        raise ValueError("max() arg is an empty List")
     i: int = 0
     while i < len(list2):
         list1.append(list2[i])
