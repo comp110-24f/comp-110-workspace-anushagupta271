@@ -6,7 +6,7 @@ __author__ = "730646393"
 def input_guess(word_length: int) -> str:
     """prompt user to enter a guess and continue prompting them until they provide a guess of the correct length"""
     word: str = input(
-        f"Enter a {word_length}-character word: "
+        f"Enter a {word_length} character word: "
     )  # f allows me not to have to concatenate strings
     while len(word) != word_length:
         word = input(
